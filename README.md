@@ -38,6 +38,9 @@ cause application bugs. The precise definitions of these anomalies are given in 
 |               | "repeatable read" ★          | monotonic atomic view  | ✓  | ✓   | ✓   | ✓   | ✓   | R/O | —  | R/O      | —       | —    |
 |               | "serializable"               | serializable           | ✓  | ✓   | ✓   | ✓   | ✓   | ✓   | ✓  | ✓        | ✓       | ✓    |
 |               |                              |                        |    |     |     |     |     |     |    |          |         |      |
+| TiDB     | "read committed" (pessimistic mode)     | monotonic atomic view  | ✓  | ✓   | ✓   | ✓   | ✓   | R/O   | —  | R/O        | —       | —    |
+|               | "repeatable read" ★              | snapshot isolation     | ✓  | ✓   | ✓   | ✓   | ✓   | R/O   | —  | R/O        | —       | — |
+|               |                              |                        |    |     |     |     |     |     |    |          |         |      |
 | Oracle DB     | "read committed" ★           | monotonic atomic view  | ✓  | ✓   | ✓   | ✓   | ✓   | —   | —  | —        | —       | —    |
 |               | "serializable"               | snapshot isolation     | ✓  | ✓   | ✓   | ✓   | ✓   | ✓   | ✓  | ✓        | —       | some |
 |               |                              |                        |    |     |     |     |     |     |    |          |         |      |
