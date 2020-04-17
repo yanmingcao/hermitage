@@ -39,7 +39,7 @@ cause application bugs. The precise definitions of these anomalies are given in 
 |               | "serializable"               | serializable           | ✓  | ✓   | ✓   | ✓   | ✓   | ✓   | ✓  | ✓        | ✓       | ✓    |
 |               |                              |                        |    |     |     |     |     |     |    |          |         |      |
 | TiDB     | "read committed" (pessimistic mode)     | monotonic atomic view  | ✓  | ✓   | ✓   | ✓   | ✓   | R/O   | —  | R/O        | —       | —    |
-|               | "repeatable read" ★              | snapshot isolation     | ✓  | ✓   | ✓   | ✓   | ✓   | R/O   | —  | R/O        | —       | — |
+|               | "repeatable read" (optimistic mode) ★  | snapshot isolation     | ✓  | ✓   | ✓   | ✓   | ✓   | ✓  | ✓  | ✓   | —       | — |
 |               |                              |                        |    |     |     |     |     |     |    |          |         |      |
 | Oracle DB     | "read committed" ★           | monotonic atomic view  | ✓  | ✓   | ✓   | ✓   | ✓   | —   | —  | —        | —       | —    |
 |               | "serializable"               | snapshot isolation     | ✓  | ✓   | ✓   | ✓   | ✓   | ✓   | ✓  | ✓        | —       | some |
